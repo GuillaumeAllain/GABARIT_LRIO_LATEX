@@ -11,7 +11,7 @@
 \input{paquets_supplementaires}
 %% Paquets de mise en page
 %% Marges
-\usepackage[top=2.5cm, bottom=3cm, left=1.75cm, right=1.75cm,marginparwidth=3.6cm, marginparsep=3mm, headsep=1cm, footskip=0.5cm]{geometry}
+\usepackage[top=2.5cm, bottom=3cm, left=1.75cm, right=1.75cm,marginparwidth=3.6cm, marginparsep=3mm, headsep=1cm, footskip=25pt]{geometry}
 %% Pour math et texte en palatino:
 \usepackage{mathpazo}
 %% Titrage
@@ -25,28 +25,28 @@
 \makeglossaries
 
 \begin{document}
-
-
+%Page titre
 \maketitle
-
+\cleardoublepage
+\setcounter{tocdepth}{2}
+%Tables et acronymes
+\tableofcontents                % production de la TdM
+\listoffigures                  % production de la liste des figures
+\listoftables                   % production de la liste des tableaux
+\printglossary[type=\acronymtype,title=Acronyms]
 \cleardoublepage
 
-\setcounter{tocdepth}{2}
+\input{corps}         % conclusion
 
-\tableofcontents                % production de la TdM
-
-\listoffigures                  % production de la liste des figures
-
-\listoftables                   % production de la liste des tableaux
-
-\printglossary[type=\acronymtype,title=Acronyms]
-
-\include{corps}         % conclusion
+\cleardoublepage
+%appendices si nécessaires
 
 % \appendix                       % annexes le cas échéant
 
 % \include{annexe}                % annexe A
+% \cleardoublepage
 
+%bibliographie
 \bibliography{bibliographie}                % production de la bibliographie
 
 \end{document}
