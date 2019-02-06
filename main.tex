@@ -1,0 +1,49 @@
+% !TEX option = -shell-escape
+%% GABARIT POUR FICHIERS LRIO
+\documentclass[letterpaper, 12pt]{article}
+%% Langues et UTF8
+\usepackage[french]{babel}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+
+%% Paquets dans un fichier séparé
+\include{style/paquets}
+\include{paquets_supplementaires}
+%% Paquets de mise en page
+%% Marges
+\usepackage[top=2.5cm, bottom=3cm, left=1.75cm, right=1.75cm,marginparwidth=3.6cm, marginparsep=3mm, headsep=1cm, footskip=0.5cm]{geometry}
+%% Pour math et texte en palatino:
+\usepackage{mathpazo}
+%% Titrage
+\usepackage{titling}
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+%% mise en page. Dernier paquet importé
+\usepackage{style/gabarit_LRIO}
+\include{information}
+
+\begin{document}
+
+
+\maketitle
+
+\cleardoublepage
+
+\setcounter{tocdepth}{2}
+
+\tableofcontents                % production de la TdM
+
+\listoffigures                  % production de la liste des figures
+
+\listoftables                   % production de la liste des tableaux
+
+
+\include{corps}         % conclusion
+
+% \appendix                       % annexes le cas échéant
+
+% \include{annexe}                % annexe A
+
+\bibliography{bibliographie}                % production de la bibliographie
+
+\end{document}

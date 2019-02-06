@@ -1,0 +1,79 @@
+%Copié fortement de Sint-Jozefinstituut Essen - Onderzoeksopdracht
+% \ProvidesPackage{gabarit_LRIO}
+% \RequirePackage{fancyhdr, titling, mathpazo, lastpage}
+
+%commando om klas in te voeren
+\newcommand{\klas}[1]{\def\@klas{#1}}
+
+%commando om
+\newcommand{\TitleExtra}[1]{\def\@extratitlestuff{#1}}
+
+%lengtes voor titelpagina
+\newlength{\logowidth}
+\setlength{\logowidth}{5cm}
+
+%commando om titelpagina te maken
+\renewcommand{\maketitle}{
+  \thispagestyle{empty}
+  % \leavevmode%
+  \vskip -2cm
+  \begin{tabular}{cc}
+    \begin{minipage}{\logowidth}
+        \includegraphics[width = \logowidth]{style/logo_LRIO}
+      \end{minipage} &
+  \end{tabular}
+  \vskip \stretch{3}%
+  \noindent
+  \rule{\textwidth}{2pt}
+  \vskip 0.75em%
+  \begin{center}
+    {\Huge\textbf \@title \par}%
+  \end{center}
+  \vskip 0.75em%
+  \noindent%
+  \rule{\textwidth}{2pt}%
+  \ifdefined\@extratitlestuff
+    \vskip 0.75em%
+    \begin{center}
+    \@extratitlestuff
+  \end{center}
+  \fi
+  \vskip \stretch{3}%
+  \hfill  \@author\par%
+  \vskip 0.5em%
+  \hfill  \@date%
+  \vskip \stretch{1}%
+  \setcounter{page}{1}%
+  \normalfont
+}
+
+%instellen header en footer, met package fancyhdr
+\pagestyle{fancy}
+\addtolength{\headheight}{30pt}
+\renewcommand{\headrulewidth}{0.5pt}
+\renewcommand{\footrulewidth}{0.5pt}
+\fancyhead{}
+\fancyhead[L0]{\includegraphics[width=2cm]{style/logo_LRIO}}
+\fancyhead[RO]{\footnotesize \@title}
+\fancyfoot{}
+\fancyfoot[LO]{\footnotesize \@author}
+\fancyfoot[RO]{\footnotesize \thepage/\pageref*{LastPage}}
+
+%% Gestion des hyperliens dans le document. S'assurer que hyperref
+%% est le dernier paquetage chargé.
+\usepackage{hyperref}
+\hypersetup{colorlinks, allcolors=[rgb]{0, 0, 0.3}}
+% \newsubfloat{figure}
+
+%% Options de mise en forme du mode français de babel. Consulter la
+%% documentation du paquetage babel pour les options disponibles.
+%% Désactiver (effacer ou mettre en commentaire) si l'option
+%% 'nobabel' est spécifiée au chargement de la classe.
+\frenchbsetup{%
+  StandardItemizeEnv=true,       % format standard des listes
+  ThinSpaceInFrenchNumbers=true, % espace fine dans les nombres
+  og=«, fg=»                     % caractères « et » sont les guillemets
+}
+
+%% Style de la bibliographie.
+\bibliographystyle{plain}

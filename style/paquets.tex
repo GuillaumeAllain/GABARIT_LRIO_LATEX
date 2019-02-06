@@ -1,0 +1,64 @@
+%PAQUETAGE
+%Symboles de mathématiques
+\usepackage{amsmath,amssymb}
+\usepackage{savesym}
+\usepackage{siunitx}
+\usepackage{physics}
+\usepackage{braket}
+\usepackage{mathtools}
+
+%Couleurs et graphiques
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{colortbl}
+\usepackage{rotating}
+
+%PGF et Tikz
+
+\savesymbol{attribute}
+
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta}
+\usetikzlibrary{calc}
+\usetikzlibrary{hobby}
+\usetikzlibrary{positioning}
+
+
+%Commandes pour UMLcd
+\usepackage{pgf-umlcd}
+\renewcommand{\umlfillcolor}{white}
+\renewcommand{\umldrawcolor}{black}
+\usepackage[export]{adjustbox}
+\tikzset{
+%Define style for boxes
+punkt/.style={
+       rectangle,
+       rounded corners,
+       draw=black, very thick,
+       text width=5em,
+       minimum height=1.5em,
+       text centered},
+punkt2/.style={
+      rectangle,
+      draw=black, very thick,
+      text width=5em,
+      minimum height=1.5em,
+      text centered},
+}
+
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.16}
+\usepgfplotslibrary{external}
+\tikzexternalize{main}
+
+%float et images
+\usepackage{caption,subcaption}
+\usepackage{float}
+\usepackage{wrapfig}
+
+%tableaux
+\usepackage{hhline}
+\usepackage{listings}
+
+\usepackage{xparse}
+\usepackage{csquotes}
