@@ -21,6 +21,8 @@
 %% mise en page. Dernier paquet importé
 \usepackage{style/gabarit_LRIO}
 \input{information}
+\input{liste_acronymes}
+\makeglossaries
 
 \begin{document}
 
@@ -37,6 +39,7 @@
 
 \listoftables                   % production de la liste des tableaux
 
+\printglossary[type=\acronymtype,title=Acronyms]
 
 \include{corps}         % conclusion
 
