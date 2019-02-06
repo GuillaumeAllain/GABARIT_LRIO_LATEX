@@ -53,11 +53,12 @@
 \renewcommand{\headrulewidth}{0.5pt}
 \renewcommand{\footrulewidth}{0.5pt}
 \fancyhead{}
-\fancyhead[L0]{\includegraphics[width=2cm]{style/logo_LRIO}}
-\fancyhead[RO]{\footnotesize \@extratitlestuff}
+\fancyhead[L0]{\footnotesize\includegraphics[width=2cm]{style/logo_LRIO}}
+\fancyhead[RO]{\rule[-2.5ex]{0pt}{2.5ex}\footnotesize \@extratitlestuff}
 \fancyfoot{}
-\fancyfoot[LO]{\footnotesize \@author}
-\fancyfoot[RO]{\footnotesize \thepage/\pageref*{LastPage}}
+\fancyfoot[LO]{\rule[2.5ex]{0pt}{2.5ex}\footnotesize \@author}
+\fancyfoot[RO]{\rule[2.5ex]{0pt}{2.5ex}\footnotesize \thepage/\pageref*{LastPage}}
+
 
 %% Gestion des hyperliens dans le document. S'assurer que hyperref
 %% est le dernier paquetage chargé.
