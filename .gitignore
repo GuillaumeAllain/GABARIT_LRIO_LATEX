@@ -238,4 +238,4 @@ TSWLatexianTemp*
 *.dep
 
 # logo lrio
-!/logo/logo_LRIO.pdf
+!/style/logo_LRIO.pdf
