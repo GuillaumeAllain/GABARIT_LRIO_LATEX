@@ -6,7 +6,7 @@
 \newcommand{\klas}[1]{\def\@klas{#1}}
 
 %commando om
-\newcommand{\TitleExtra}[1]{\def\@extratitlestuff{#1}}
+\newcommand{\filetitle}[1]{\def\@extratitlestuff{#1}}
 
 %lengtes voor titelpagina
 \newlength{\logowidth}
@@ -54,7 +54,7 @@
 \renewcommand{\footrulewidth}{0.5pt}
 \fancyhead{}
 \fancyhead[L0]{\includegraphics[width=2cm]{style/logo_LRIO}}
-\fancyhead[RO]{\footnotesize \@title}
+\fancyhead[RO]{\footnotesize \@extratitlestuff}
 \fancyfoot{}
 \fancyfoot[LO]{\footnotesize \@author}
 \fancyfoot[RO]{\footnotesize \thepage/\pageref*{LastPage}}
