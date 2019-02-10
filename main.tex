@@ -2,6 +2,7 @@
 %% GABARIT POUR FICHIERS LRIO
 \documentclass[letterpaper, 12pt]{article}
 %% Langues et UTF8
+\usepackage[numbers]{natbib}
 \usepackage[french]{babel}
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
@@ -18,6 +19,11 @@
 \usepackage{titling}
 \usepackage{fancyhdr}
 \usepackage{lastpage}
+%% Bibliographie
+\usepackage{multibib}
+\newcites{interne}{Documents internes}
+\bibliographystyle{plainnat}
+\bibliographystyleinterne{plainnat}
 %% mise en page. Dernier paquet importé
 \usepackage{style/gabarit_LRIO}
 \input{information}
@@ -47,6 +53,7 @@
 % \cleardoublepage
 
 %bibliographie
-\bibliography{bibliographie}                % production de la bibliographie
+\bibliography{bibliographie}                % production de la
+\bibliographyinterne{interne}
 
 \end{document}
