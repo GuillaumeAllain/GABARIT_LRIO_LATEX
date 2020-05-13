@@ -232,6 +232,7 @@ TSWLatexianTemp*
 *-tags.tex
 
 # standalone packages
+
 *.sta
 *.table
 *.DS_Store
@@ -239,3 +240,4 @@ TSWLatexianTemp*
 
 # logo lrio
 !/style/logo_LRIO.pdf
+/tmp/

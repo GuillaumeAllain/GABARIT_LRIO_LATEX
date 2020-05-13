@@ -23,8 +23,8 @@
 %% Bibliographie
 \usepackage{multibib}
 \newcites{interne}{Documents internes}
-\bibliographystyle{plainnat}
-\bibliographystyleinterne{plainnat}
+\bibliographystyle{unsrtnat}
+\bibliographystyleinterne{unsrtnat}
 %% mise en page. Dernier paquet importé
 \usepackage{style/gabarit_LRIO}
 \input{information}
@@ -35,6 +35,7 @@
 %Page titre
 \maketitle
 \cleardoublepage
+\pagenumbering{roman}
 \setcounter{tocdepth}{3}
 %Tables et acronymes
 \section*{Version du document}
@@ -54,7 +55,8 @@
 \printglossary[type=\acronymtype,title=Acronymes]
 \bibliographyinterne{interne}
 \cleardoublepage
-
+\setcounter{page}{1}
+\pagenumbering{arabic}
 \input{corps}         % conclusion
 
 \cleardoublepage
