@@ -241,3 +241,6 @@ TSWLatexianTemp*
 # logo lrio
 !/style/logo_LRIO.pdf
 /tmp/
+
+# protect images
+!/images/
