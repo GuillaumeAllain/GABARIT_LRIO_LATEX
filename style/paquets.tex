@@ -53,8 +53,12 @@ punkt2/.style={
 \usepackage{pgfplots}
 \usepackage{pgfplotstable}
 \pgfplotsset{compat=1.16}
+\newcommand{\inputtikz}[1]{%
+  \tikzsetnextfilename{#1}%
+  \input{#1.tikz}%
+}
 \usetikzlibrary{external}
-% \tikzexternalize[prefix=tikz/]
+\tikzexternalize[prefix=tikz/]
 
 %float et images
 \usepackage{caption,subcaption}
